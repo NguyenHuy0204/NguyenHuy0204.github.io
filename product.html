@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Văn phòng phẩm ABC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products-style.css"> </head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo Văn phòng phẩm ABC">
+                </a>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html" class="active">Sản phẩm</a></li> <li class="dropdown">
+                        <a href="#" class="dropbtn">Danh mục</a>
+                        <div class="dropdown-content">
+                            <a href="category-but.html">Bút viết</a>
+                            <a href="category-so.html">Sổ tay</a>
+                            <a href="category-giay.html">Giấy in</a>
+                            <a href="category-dungcu.html">Dụng cụ học tập</a>
+                            <a href="category-balo-tui-xach.html">Balo & Túi xách</a>
+                            <a href="category-do-dung-van-phong.html">Đồ dùng văn phòng</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-page-main">
+        <div class="container product-layout">
+            <aside class="product-filters">
+                <div class="filter-group search-filter">
+                    <label for="search-product">Tìm kiếm sản phẩm</label>
+                    <input type="text" id="search-product" placeholder="Tìm kiếm theo tên...">
+                </div>
+
+                <div class="filter-group">
+                    <h3>Bộ lọc</h3>
+                </div>
+
+                <div class="filter-group">
+                    <label for="brand-filter">Hãng sản phẩm</label>
+                    <select id="brand-filter">
+                        <option value="">Tất cả hãng</option>
+                        <option value="ThienLong">Thiên Long</option>
+                        <option value="DoubleA">Double A</option>
+                        <option value="FaberCastell">Faber-Castell</option>
+                        <option value="Plus">Plus</option>
+                        </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="price-filter">Giá</label>
+                    <input type="range" id="price-filter" min="0" max="200000" value="200000">
+                    <p>Giá tối đa: <span id="max-price-display">200.000 VNĐ</span></p>
+                </div>
+
+                </aside>
+
+            <section class="product-list-area">
+                <div class="product-header">
+                    <h2>Tất cả sản phẩm</h2>
+                    <div class="sort-options">
+                        Sắp xếp theo:
+                        <select id="sort-products">
+                            <option value="default">Mặc định</option>
+                            <option value="name-asc">Tên (A-Z)</option>
+                            <option value="name-desc">Tên (Z-A)</option>
+                            <option value="price-asc">Giá (Thấp đến Cao)</option>
+                            <option value="price-desc">Giá (Cao đến Thấp)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="product-grid">
+                    <div class="product-item" data-name="Bút bi Thiên Long 0.5mm" data-brand="ThienLong" data-price="7000">
+                        <a href="product-detail-1.html">
+                            <img src="images/product-1.jpg" alt="Bút bi Thiên Long 0.5mm">
+                            <h3>Bút bi Thiên Long 0.5mm</h3>
+                            <p class="price">7.000 VNĐ</p>
+                        </a>
+                        <button class="btn-add-to-cart">Thêm vào giỏ</button>
+                    </div>
+                    <div class="product-item" data-name="Sổ A5 kẻ ngang" data-brand="" data-price="25000">
+                        <a href="product-detail-2.html">
+                            <img src="images/product-2.jpg" alt="Sổ A5 kẻ ngang">
+                            <h3>Sổ A5 kẻ ngang</h3>
+                            <p class="price">25.000 VNĐ</p>
+                        </a>
+                        <button class="btn-add-to-cart">Thêm vào giỏ</button>
+                    </div>
+                    <div class="product-item" data-name="Giấy A4 Double A 70gsm" data-brand="DoubleA" data-price="65000">
+                        <a href="product-detail-3.html">
+                            <img src="images/product-3.jpg" alt="Giấy A4 Double A 70gsm">
+                            <h3>Giấy A4 Double A 70gsm</h3>
+                            <p class="price">65.000 VNĐ</p>
+                        </a>
+                        <button class="btn-add-to-cart">Thêm vào giỏ</button>
+                    </div>
+                    <div class="product-item" data-name="Hộp bút chì màu Faber-Castell" data-brand="FaberCastell" data-price="80000">
+                        <a href="product-detail-4.html">
+                            <img src="images/product-4.jpg" alt="Hộp bút chì màu Faber-Castell">
+                            <h3>Hộp bút chì màu Faber-Castell</h3>
+                            <p class="price">80.000 VNĐ</p>
+                        </a>
+                        <button class="btn-add-to-cart">Thêm vào giỏ</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Địa chỉ cơ sở</h3>
+                    <p>Văn phòng phẩm ABC</p>
+                    <p>123 Đường ABC, Quận XYZ</p>
+                    <p>Thành phố Hà Nội, Việt Nam</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Các mục</h3>
+                    <ul>
+                        <li><a href="products.html">Tất cả sản phẩm</a></li>
+                        <li><a href="promotion.html">Khuyến mãi</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                        <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Thông tin liên hệ</h3>
+                    <p>Điện thoại: <a href="tel:+84987654321">0987 654 321</a></p>
+                    <p>Email: <a href="mailto:info@vanphongphamabc.com">info@vanphongphamabc.com</a></p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Văn phòng phẩm ABC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/products-script.js"></script> </body>
+</html>
