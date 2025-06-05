@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu hỏi thường gặp - Văn phòng phẩm Offi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS riêng cho trang FAQ */
+        .faq-section {
+            padding: 40px 0;
+        }
+
+        .faq-section h1 {
+            text-align: center;
+            font-size: 2.8em;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .faq-category {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .faq-category:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-category h2 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+            cursor: pointer; /* Để tạo hiệu ứng có thể click */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.2em;
+            margin-left: 10px;
+        }
+
+        .faq-question.active::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.7;
+            display: none; /* Mặc định ẩn */
+            padding-top: 10px;
+            border-top: 1px dashed #eee; /* Đường kẻ phân cách */
+            margin-top: 10px;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 10px;
+        }
+
+        .faq-answer ul {
+            list-style: disc;
+            margin-left: 25px;
+        }
+
+        .faq-answer ul li {
+            margin-bottom: 5px;
+        }
+
+        .faq-answer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Đảm bảo container ở đây cũng có chiều rộng tối đa như ở index.html nếu style.css không định nghĩa */
+        .container {
+            max-width: 1200px; /* Điều chỉnh cho phù hợp với container trong style.css của bạn */
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo Văn phòng phẩm ABC">
+                </a>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+                    <li><a href="sanpham.html">Sản phẩm</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="phanhoi.html">Phản hồi</a></li>
+                    </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <button id="searchButton">Tìm kiếm</button>
+            </div>
+            <div class="user-actions">
+                <a href="dangnhap.html" class="action-icon" aria-label="Đăng nhập">
+                    <img src="images/login_icon.png" alt="Đăng nhập">
+                </a>
+                <a href="giohang.html" class="action-icon" aria-label="Giỏ hàng">
+                    <img src="images/cart_icon.jpg" alt="Giỏ hàng">
+                    <span class="cart-count">0</span> </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="faq-section">
+            <div class="container">
+                <h1>Câu hỏi thường gặp (FAQ)</h1>
+
+                <div class="faq-category">
+                    <h2>I. Về Sản phẩm</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">Sản phẩm của Shop có phải hàng chính hãng không?</div>
+                        <div class="faq-answer">
+                            <p>Chúng tôi cam kết 100% sản phẩm phân phối là hàng chính hãng từ các thương hiệu uy tín như Thiên Long, Deli, Double A, Hồng Hà, Pentel, v.v. Mỗi sản phẩm đều có nguồn gốc rõ ràng và đảm bảo chất lượng.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Shop có những loại văn phòng phẩm nào?</div>
+                        <div class="faq-answer">
+                            <p>Chúng tôi cung cấp đa dạng các loại văn phòng phẩm bao gồm: Bút viết (bút bi, bút gel, bút chì, bút dạ quang...), Sổ tay - Giấy (sổ ghi chép, sổ còng, giấy A4, giấy in ảnh...), Dụng cụ học tập (thước kẻ, compa, tẩy, gọt bút chì...), File - Bìa - Kẹp, Dụng cụ cắt dán, Đồ dùng văn phòng phẩm khác (ghim, băng keo, máy bấm kim...), và nhiều hơn nữa.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Tôi có thể tìm thông tin chi tiết về sản phẩm ở đâu?</div>
+                        <div class="faq-answer">
+                            <p>Bạn có thể nhấp vào từng sản phẩm để xem thông tin chi tiết về mô tả, thông số kỹ thuật, giá cả và hình ảnh. Nếu cần thêm thông tin, đừng ngần ngại liên hệ với bộ phận hỗ trợ khách hàng của chúng tôi.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Làm thế nào để chọn đúng loại bút/giấy/sổ phù hợp với nhu cầu của tôi?</div>
+                        <div class="faq-answer">
+                            <p>Bạn có thể tham khảo mô tả chi tiết sản phẩm hoặc liên hệ trực tiếp với chúng tôi qua <a href="tel:0987654321">0987 654 321</a> / <a href="mailto:info@vanphongphamoffi.com">info@vanphongphamoffi.com</a> để được tư vấn cụ thể về mục đích sử dụng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>II. Về Đặt hàng & Thanh toán</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">Làm thế nào để đặt hàng trên website của Shop?</div>
+                        <div class="faq-answer">
+                            <p>Rất đơn giản! Bạn chỉ cần chọn sản phẩm muốn mua, thêm vào giỏ hàng, sau đó truy cập giỏ hàng và làm theo hướng dẫn để điền thông tin giao hàng và thanh toán.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Shop chấp nhận những hình thức thanh toán nào?</div>
+                        <div class="faq-answer">
+                            <p>Chúng tôi chấp nhận các hình thức thanh toán sau:</p>
+                            <ul>
+                                <li>Thanh toán khi nhận hàng (COD).</li>
+                                <li>Thanh toán chuyển khoản ngân hàng.</li>
+                                <li>Thanh toán qua ví điện tử (ví dụ: Momo, ZaloPay).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Tôi có thể hủy đơn hàng sau khi đã đặt không?</div>
+                        <div class="faq-answer">
+                            <p>Bạn có thể hủy đơn hàng trong vòng 2 giờ kể từ khi đặt hàng, hoặc trước khi đơn hàng được đóng gói và vận chuyển. Vui lòng liên hệ ngay với chúng tôi để được hỗ trợ.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Tôi có được xuất hóa đơn VAT không?</div>
+                        <div class="faq-answer">
+                            <p>Có, chúng tôi có hỗ trợ xuất hóa đơn VAT cho các đơn hàng của doanh nghiệp. Vui lòng cung cấp thông tin xuất hóa đơn đầy đủ khi đặt hàng hoặc liên hệ trước để được hướng dẫn.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Shop có chính sách giá sỉ/chiết khấu cho đơn hàng lớn không?</div>
+                        <div class="faq-answer">
+                            <p>Có, chúng tôi có chính sách giá ưu đãi dành cho các đơn hàng số lượng lớn hoặc khách hàng doanh nghiệp. Vui lòng liên hệ trực tiếp để nhận báo giá tốt nhất.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>III. Về Vận chuyển & Giao nhận</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">Phí vận chuyển được tính như thế nào?</div>
+                        <div class="faq-answer">
+                            <p>Phí vận chuyển sẽ được tính dựa trên địa chỉ nhận hàng và trọng lượng/kích thước của đơn hàng. Bạn có thể xem phí vận chuyển cụ thể tại trang thanh toán trước khi xác nhận đơn hàng.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Bao lâu tôi sẽ nhận được hàng?</div>
+                        <div class="faq-answer">
+                            <p>Thời gian giao hàng dự kiến từ 1-3 ngày làm việc đối với nội thành Hà Nội và từ 3-5 ngày làm việc đối với các tỉnh thành khác. Thời gian có thể thay đổi tùy thuộc vào địa điểm và thời tiết.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Shop có giao hàng toàn quốc không?</div>
+                        <div class="faq-answer">
+                            <p>Có, chúng tôi hỗ trợ giao hàng trên toàn quốc.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Tôi có thể theo dõi tình trạng đơn hàng của mình không?</div>
+                        <div class="faq-answer">
+                            <p>Sau khi đơn hàng được gửi đi, bạn sẽ nhận được email hoặc tin nhắn SMS kèm mã vận đơn và đường link để theo dõi tình trạng đơn hàng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>IV. Về Đổi trả & Bảo hành</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">Chính sách đổi trả hàng của Shop như thế nào?</div>
+                        <div class="faq-answer">
+                            <p>Chúng tôi hỗ trợ đổi trả sản phẩm trong vòng 7 ngày kể từ ngày nhận hàng nếu sản phẩm bị lỗi do nhà sản xuất, hư hỏng trong quá trình vận chuyển, hoặc không đúng với mô tả. Vui lòng xem chi tiết tại trang <a href="privacy-policy.html">Chính sách bảo mật</a>.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Sản phẩm có được bảo hành không?</div>
+                        <div class="faq-answer">
+                            <p>Các sản phẩm có quy định bảo hành từ nhà sản xuất sẽ được áp dụng chính sách bảo hành tương ứng. Vui lòng giữ hóa đơn hoặc thông tin mua hàng để được hỗ trợ.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>V. Các câu hỏi khác</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">Giờ làm việc của Shop là khi nào?</div>
+                        <div class="faq-answer">
+                            <p>Chúng tôi làm việc từ 9:00 - 21:00 các ngày trong tuần (trừ ngày lễ).</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Tôi có thể liên hệ với Shop bằng cách nào?</div>
+                        <div class="faq-answer">
+                            <p>Bạn có thể liên hệ với chúng tôi qua:</p>
+                            <ul>
+                                <li>Điện thoại: <a href="tel:+84987654321">0987 654 321</a></li>
+                                <li>Email: <a href="mailto:info@vanphongphamoffi.com">info@vanphongphamoffi.com</a></li>
+                                <li>Trang Fanpage Facebook: <a href="#" target="_blank">[Link Fanpage nếu có]</a></li>
+                                <li>Hoặc sử dụng biểu mẫu liên hệ trên website.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Địa chỉ cơ sở</h3>
+                    <p>Văn phòng phẩm ABC</p>
+                    <p>123 Đường ABC, Quận XYZ</p>
+                    <p>Thành phố Hà Nội, Việt Nam</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Các mục</h3>
+                    <ul>
+                        <li><a href="products.html">Tất cả sản phẩm</a></li>
+                        <li><a href="promotion.html">Khuyến mãi</a></li>
+                        <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                        <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Thông tin liên hệ</h3>
+                    <p>Điện thoại: <a href="tel:+84987654321">0987 654 321</a></p>
+                    <p>Email: <a href="mailto:info@vanphongphamabc.com">info@vanphongphamabc.com</a></p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Văn phòng phẩm Offi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></
