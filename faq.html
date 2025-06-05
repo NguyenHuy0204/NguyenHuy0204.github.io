@@ -313,4 +313,34 @@
         </div>
     </footer>
 
-    <script src="script.js"></
+    <script src="script.js"></script> 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling; // Lấy phần tử trả lời ngay sau câu hỏi
+                    
+                    // Đóng tất cả các câu trả lời đang mở, trừ câu hiện tại
+                    faqQuestions.forEach(q => {
+                        if (q !== question && q.classList.contains('active')) {
+                            q.classList.remove('active');
+                            q.nextElementSibling.style.display = 'none';
+                        }
+                    });
+
+                    // Chuyển đổi trạng thái hiển thị của câu trả lời hiện tại
+                    question.classList.toggle('active');
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
