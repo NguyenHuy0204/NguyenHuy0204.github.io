@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offi - Văn phòng phẩm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <h2>ĐĂNG NHẬP HOẶC ĐĂNG KÝ</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="register-form">
+                <h1>Tạo tài khoản</h1>
+                <input type="text" id="register-name" placeholder="Họ tên" required/>
+                <input type="email" id="register-email" placeholder="Email" required/>
+                <input type="password" id="register-password" placeholder="Mật khẩu" required/>
+                <button type="button" id="register-button">Đăng ký</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="login-form">
+                <h1>Đăng nhập</h1>
+                <input type="email" id="login-email" placeholder="Email" required/>
+                <input type="password" id="login-password" placeholder="Mật khẩu" required/>
+                <a href="#">Quên mật khẩu?</a>
+                <button type="button" id="login-button">Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Chào mừng trở lại!</h1>
+                    <p>Đăng nhập để tiếp tục khám phá Offi - Thế giới văn phòng phẩm tiện ích</p>
+                    <button class="ghost" id="signIn">Đăng nhập</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Xin chào!</h1>
+                    <p>Tạo tài khoản để bắt đầu mua sắm cùng Offi</p>
+                    <button class="ghost" id="signUp">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Đăng ký người dùng
+        document.getElementById('register-button').addEventListener('click', () => {
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+
+            if (name && email && password) {
+                const user = { name, email, password };
+                localStorage.setItem('user', JSON.stringify(user));
+                alert('Đăng ký thành công!');
+                document.getElementById('container').classList.remove('right-panel-active');
+            } else {
+                alert('Vui lòng điền đầy đủ thông tin.');
+            }
+        });
+
+        // Đăng nhập người dùng
+        document.getElementById('login-button').addEventListener('click', () => {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            if (!password) {
+                alert('Vui lòng nhập thông tin.');
+                return;
+            }
+
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.email === email && storedUser.password === password) {
+                window.location.href = 'index.html'; // Chuyển hướng đến trang chính
+            } else {
+                alert('Email hoặc mật khẩu không đúng.');
+            }
+        });
+
+        // Chuyển giao diện
+        document.getElementById('signIn').addEventListener('click', () => {
+            document.getElementById('container').classList.remove('right-panel-active');
+        });
+
+        document.getElementById('signUp').addEventListener('click', () => {
+            document.getElementById('container').classList.add('right-panel-active');
+        });
+    </script>
+</body>
+</html>

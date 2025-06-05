@@ -1,0 +1,24 @@
+<!-- Nút mở giỏ hàng -->
+<button id="toggleCartBtn" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+    🛒 Giỏ hàng
+</button>
+
+<!-- Giao diện giỏ hàng -->
+<div id="cartContainer" style="
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border: 2px solid #3f51b5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 999;
+">
+    <h3 style="color: #3f51b5; text-align: center;">🛒 Giỏ hàng</h3>
+    <ul id="cartItems" style="list-style: none; padding: 0; margin: 10px 0;"></ul>
+    <hr>
+    <p><strong>Tổng tiền:</strong> <span id="totalPrice">0</span> đ</p>
+</div>

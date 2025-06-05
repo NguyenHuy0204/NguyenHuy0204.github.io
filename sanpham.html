@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm - Văn phòng phẩm ABC</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+          
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo Văn phòng phẩm ABC">
+            </a>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html" id="homeLink">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="#" id="feedbackLink">Phản hồi</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button id="searchButton">Tìm kiếm</button>
+        </div>
+        <div class="user-actions">
+                <a href="dangnhap.html" class="action-icon" aria-label="Đăng nhập">
+                    <img src="images/login_icon.png" alt="Đăng nhập">
+                </a>
+                <a href="giohang.html" class="action-icon" aria-label="Giỏ hàng">
+                    <img src="images/cart_icon.jpg" alt="Giỏ hàng">
+                    <span class="cart-count">0</span> </a>
+            </div>
+    </div>
+</header>
+
+<main>
+    <section class="product-listing">
+        <div class="container">
+            <h1>Tất cả sản phẩm</h1>
+
+            <div class="filter-sort">
+    <label for="categoryFilter">Lọc theo danh mục:</label>
+    <select id="categoryFilter">
+        <option value="all">Tất cả</option>
+        <option value="but">Bút viết</option>
+        <option value="so">Sổ tay</option>
+        <option value="giay">Giấy in</option>
+        <option value="dungcu">Dụng cụ học tập</option>
+    </select>
+
+    <label for="priceSort">Sắp xếp theo giá:</label>
+    <select id="priceSort">
+        <option value="asc">Thấp đến cao</option>
+        <option value="desc">Cao đến thấp</option>
+    </select>       
+</div>
+
+            
+            <div id="productGrid" class="product-grid">
+                <div class="product-card" data-category="but">
+                    <a href="Butbithienlong.html">
+                    <img src="images/but-bi.jpg" alt="Bút bi Thiên Long">
+                    <h3>Bút bi Thiên Long</h3>
+                    <p>Giá: 7.000 VNĐ</p>
+                    </a>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="so">
+                    <img src="images/so-tay.jpg" alt="Sổ tay nhỏ">
+                    <h3>Sổ tay nhỏ</h3>
+                    <p>Giá: 15.000 VNĐ</p>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="giay">
+                    <img src="images/giay-in.jpg" alt="Giấy in A4 loại thường">
+                    <h3>Giấy in A4 loại thường</h3>
+                    <p>Giá: 60.000 VNĐ</p>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="but">
+                    <img src="images/but-long.jpg" alt="Bút lông bảng">
+                    <h3>Bút lông bảng</h3>
+                    <p>Giá: 10.000 VNĐ</p>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+
+                <div class="product-card" data-category="giay">
+                    <a href="GiayA4.html">
+                    <img src="images/giay-in.jpg" alt="Giấy A4 Double A 70gsm">
+                    <h3>Giấy A4 Double A 70gsm</h3>
+                    <p>Giá: 65.000 VNĐ</p>
+                    </a>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card" data-category="dungcu">
+                    <img src="images/compa.jpg" alt="Compa học sinh">
+                    <h3>Compa học sinh</h3>
+                    <p>Giá: 20.000 VNĐ</p>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+
+                <div class="product-card" data-category="so">
+                    <a href="SotayA5.html">
+                    <img src="images/so-a5.jpg" alt="Sổ tay A5 kẻ ngang">
+                    <h3>Sổ tay A5 kẻ ngang</h3>
+                    <p>Giá: 25.000 VNĐ</p>
+                    </a>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card" data-category="but">
+                    <img src="images/but-chi-faber.jpg" alt="Hộp bút chì màu Faber-Castell">
+                    <h3>Hộp bút chì màu Faber-Castell</h3>
+                    <p>Giá: 80.000 VNĐ</p>
+                    <button>Thêm vào giỏ</button>
+                </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h3>Địa chỉ cơ sở</h3>
+                <p>Văn phòng phẩm ABC</p>
+                <p>123 Đường ABC, Quận XYZ</p>
+                <p>Thành phố Hà Nội, Việt Nam</p>
+            </div>
+            <div class="footer-col">
+                <h3>Các mục</h3>
+                <ul>
+                    <li><a href="products.html">Tất cả sản phẩm</a></li>
+                    <li><a href="promotion.html">Khuyến mãi</a></li>
+                    <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+                    <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Thông tin liên hệ</h3>
+                <p>Điện thoại: <a href="tel:+84987654321">0987 654 321</a></p>
+                <p>Email: <a href="mailto:info@vanphongphamabc.com">info@vanphongphamabc.com</a></p>
+                <div class="social-links">
+                    <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Văn phòng phẩm ABC. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
