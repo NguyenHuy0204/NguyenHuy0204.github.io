@@ -3,58 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Về chúng tôi - Văn phòng phẩm Offi</title>
+    <title>Về chúng tôi - Văn phòng phẩm ABC</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Bạn có thể thêm các CSS riêng cho trang about.html ở đây nếu cần */
-        .about-us-hero {
-            padding: 60px 0;
-            background-color: #f8f8f8;
-            text-align: center;
-        }
-        .about-us-hero h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        .about-us-hero p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .about-us-content {
+        /* Các kiểu CSS riêng cho trang About Us */
+        .about-us-section {
             padding: 40px 0;
         }
-        .about-us-content .container {
-            max-width: 960px;
-            margin: 0 auto;
-            line-height: 1.6;
-            color: #444;
+
+        .about-intro {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        .about-us-content h2 {
+
+        .about-intro h1 {
+            font-size: 2.5em;
             color: #333;
-            margin-top: 30px;
             margin-bottom: 15px;
-            font-size: 1.8em;
+        }
+
+        .about-intro p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about-image {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section-content {
+            margin-bottom: 30px;
+        }
+
+        .section-content h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
             border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
+            padding-bottom: 10px;
         }
-        .about-us-content p {
-            margin-bottom: 20px;
+
+        .section-content p, .section-content ul {
+            font-size: 1em;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 15px;
         }
-        .about-us-content ul {
+
+        .section-content ul {
             list-style: disc;
             margin-left: 25px;
-            margin-bottom: 20px;
         }
-        .about-us-content ul li {
-            margin-bottom: 10px;
+
+        .section-content ul li {
+            margin-bottom: 8px;
         }
-        .about-us-content a {
+
+        .call-to-action {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+        }
+
+        .call-to-action p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .call-to-action a {
             color: #007bff;
             text-decoration: none;
+            font-weight: bold;
         }
-        .about-us-content a:hover {
+
+        .call-to-action a:hover {
             text-decoration: underline;
+        }
+
+        /* Đảm bảo container ở đây cũng có chiều rộng tối đa như ở index.html nếu style.css không định nghĩa */
+        .container {
+            max-width: 1200px; /* Điều chỉnh cho phù hợp với container trong style.css của bạn */
+            margin: 0 auto;
+            padding: 0 15px;
         }
     </style>
 </head>
@@ -91,33 +134,45 @@
     </header>
 
     <main>
-        <section class="about-us-hero">
+        <section class="about-us-section">
             <div class="container">
-                <h1>Về chúng tôi</h1>
-                <p>Nơi đây là câu chuyện về hành trình của Văn phòng phẩm Offi.</p>
-            </div>
-        </section>
+                <div class="about-intro">
+                    <h1>Giới thiệu về Văn phòng phẩm ABC</h1>
+                    <p>Văn phòng phẩm ABC - đơn vị chuyên phân phối văn phòng phẩm chính hãng, được thành lập vào năm 2023, với mục tiêu cung cấp các sản phẩm văn phòng phẩm chất lượng, giá tốt. Chúng tôi nhằm đáp ứng nhu cầu đa dạng của khách hàng trên toàn quốc.</p>
+                    <p>Với đội ngũ nhân viên hỗ trợ khách hàng tận tâm, sẵn sàng giải đáp mọi thắc mắc và hỗ trợ trong quá trình mua sắm, chuyên nghiệp và nhanh chóng nhất.</p>
+                </div>
 
-        <section class="about-us-content">
-            <div class="container">
-                <h2>Lịch sử hình thành</h2>
-                <p>Chúng tôi bắt đầu hành trình của mình vào năm **[Năm thành lập]** với mong muốn mang đến những sản phẩm văn phòng phẩm chất lượng cao nhất cho khách hàng. Từ những ngày đầu khiêm tốn, Văn phòng phẩm Offi đã không ngừng nỗ lực để phát triển và mở rộng, trở thành một địa chỉ đáng tin cậy cho mọi nhu cầu về văn phòng phẩm.</p>
+                <div class="about-image">
+                    <img src="images/about-us-hero.jpg" alt="Văn phòng phẩm ABC"> <p>Văn phòng phẩm ABC - đơn vị chuyên phân phối văn phòng phẩm chính hãng</p>
+                </div>
 
-                <h2>Sứ mệnh của chúng tôi</h2>
-                <p>Sứ mệnh của Văn phòng phẩm Offi là cung cấp đa dạng các sản phẩm văn phòng phẩm, từ học tập đến làm việc, với chất lượng vượt trội và giá cả hợp lý. Chúng tôi cam kết mang lại trải nghiệm mua sắm tiện lợi và sự hài lòng tuyệt đối cho mọi khách hàng, góp phần vào sự thành công trong học tập và công việc của bạn.</p>
+                <div class="section-content">
+                    <h2>Sứ mệnh của chúng tôi</h2>
+                    <p>Sứ mệnh của Văn phòng phẩm ABC là trở thành đơn vị phân phối văn phòng phẩm uy tín hàng đầu tại Việt Nam, mang đến cho khách hàng những sản phẩm chất lượng, dịch vụ tốt nhất và sự hài lòng cao nhất. Chúng tôi cam kết cung cấp những sản phẩm văn phòng phẩm đa dạng, từ những sản phẩm cơ bản như giấy, bút, sổ tay, cho đến những sản phẩm cao cấp như máy in, máy tính, thiết bị văn phòng.</p>
+                </div>
 
-                <h2>Đội ngũ của chúng tôi</h2>
-                <p>Chúng tôi tự hào có một đội ngũ nhân viên tâm huyết và chuyên nghiệp, luôn sẵn sàng hỗ trợ và tư vấn cho quý khách. Mỗi thành viên của Văn phòng phẩm Offi đều đóng góp vào sự thành công chung và cam kết vì sự phát triển bền vững của công ty, đặt lợi ích khách hàng lên hàng đầu.</p>
+                <div class="section-content">
+                    <h2>Tầm nhìn của chúng tôi</h2>
+                    <p>Văn phòng phẩm ABC luôn nỗ lực để trở thành đối tác tin cậy của mọi doanh nghiệp và cá nhân. Chúng tôi không chỉ cung cấp các sản phẩm thương hiệu văn phòng phẩm uy tín chất lượng, mà còn đặt mục tiêu xây dựng mối quan hệ lâu dài với khách hàng, trở thành một phần quan trọng trong quá trình phát triển và thành công của doanh nghiệp.</p>
+                </div>
 
-                <h2>Giá trị cốt lõi</h2>
-                <ul>
-                    <li>**Chất lượng:** Chúng tôi luôn đặt chất lượng sản phẩm lên hàng đầu, đảm bảo mỗi sản phẩm đến tay khách hàng đều đạt tiêu chuẩn cao nhất.</li>
-                    <li>**Đa dạng:** Cung cấp nhiều lựa chọn sản phẩm phong phú, phù hợp với mọi nhu cầu và sở thích khác nhau.</li>
-                    <li>**Uy tín:** Xây dựng niềm tin với khách hàng thông qua dịch vụ chuyên nghiệp, minh bạch và tận tâm.</li>
-                    <li>**Sáng tạo:** Luôn tìm kiếm và cập nhật những sản phẩm mới, tiện ích và các giải pháp tối ưu để nâng cao trải nghiệm khách hàng.</li>
-                </ul>
+                <div class="section-content">
+                    <h2>Giá trị cốt lõi</h2>
+                    <p>Văn phòng phẩm ABC hướng đến sự chuyên nghiệp, tận tâm và sự đáng tin cậy. Chúng tôi luôn đặt lợi ích của khách hàng lên hàng đầu và đảm bảo mọi yêu cầu về đề xuất đều được xử lý một cách nhanh chóng và hiệu quả.</p>
+                    <p>Đội ngũ nhân viên của Văn phòng phẩm ABC được đào tạo chuyên sâu và luôn sẵn sàng tư vấn, hỗ trợ khách hàng với mọi vấn đề liên quan đến văn phòng phẩm.</p>
+                </div>
 
-                <p style="text-align: center;">Nếu bạn có bất kỳ câu hỏi nào, xin đừng ngần ngại liên hệ với chúng tôi qua email: <a href="mailto:info@vanphongphamabc.com">info@vanphongphamabc.com</a> hoặc số điện thoại: **[Số điện thoại của bạn]**.</p>
+                <div class="section-content">
+                    <h2>Sản phẩm đa dạng, chất lượng</h2>
+                    <p>Sản phẩm văn phòng phẩm của chúng tôi được chọn lọc kỹ càng từ các nhà cung cấp uy tín trên thị trường. Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng, đáng tin cậy và đa dạng.</p>
+                    <p>Văn phòng phẩm ABC chuyên cung cấp một loạt các sản phẩm liên quan đến văn phòng phẩm, bao gồm giấy in, giấy photocopy, giấy A4, giấy A3, giấy A5, giấy in ảnh, dụng cụ văn phòng, bìa cứng, sổ tay và nhiều sản phẩm khác. Chúng tôi tự hào là đối tác hàng đầu của các thương hiệu nổi tiếng như Double A, Thiên Long, Hồng Hà, Deli, và nhiều thương hiệu khác. Văn phòng phẩm ABC đảm bảo mọi nhu cầu của khách hàng đều được đáp ứng một cách nhanh chóng và tốt nhất.</p>
+                    <p>Văn phòng phẩm ABC tự hào là đơn vị phân phối văn phòng phẩm uy tín hàng đầu tại Việt Nam. Với cam kết uy tín, chất lượng chúng tôi tin rằng khách hàng sẽ có sản phẩm giá rẻ, chiết khấu cao, thủ tục nhập mua hàng đơn giản, giao hàng nhanh, đảm bảo.</p>
+                </div>
+
+                <div class="call-to-action">
+                    <p>Hãy liên hệ với Văn phòng phẩm ABC để nhận được sản phẩm chất lượng, giá tốt cùng nhiều ưu đãi hấp dẫn!</p>
+                    <p>Email: <a href="mailto:info@vanphongphamabc.com">info@vanphongphamabc.com</a> | Điện thoại: 0987 654 321</p>
+                </div>
             </div>
         </section>
     </main>
@@ -147,7 +202,7 @@
                     <div class="social-links">
                         <a href="#" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a>
                         <a href="#" target="_blank"><img src="images/icon-instagram.png" alt="Instagram"></a>
-                        </div>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
